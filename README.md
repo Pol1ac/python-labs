@@ -1,1 +1,3 @@
-# python-labs
+# Hm-team-work-lab5
+ Homework on 21.11.2023 from VirusLiviv
+ Створити клас Clothing (name, description, location, colour, size).  Додати enum type: SHIRT, JEANS, JACKET, …. Додати клас Wardrobe, котрий містить одяг. Визначити функцію are goOut( Clothing*) - вивести кількість типів одягу та чи готова людина вийти на вулицю (якщо кількість типів більша, ніж три - так, менша - ні). Посортуйте одяг за розміром.  Додайте ще один метод до класу одягу
