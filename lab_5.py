@@ -3,7 +3,7 @@ class ClothingType(Enum):
     SHIRT = 1
     JEANS = 2
     JACKET = 3
-    # Додайте інші типи одягу за необхідністю
+   
 
 class Clothing:
     def __init__(self, name, description, location, colour, size, clothing_type):
@@ -43,7 +43,6 @@ class Wardrobe:
     def sort_clothes_by_size(self):
         self.clothes.sort()
 
-# Приклад використання:
 def main():
     wardrobe = Wardrobe()
 
@@ -55,21 +54,19 @@ def main():
     wardrobe.add_clothing(jeans1)
     wardrobe.add_clothing(jacket1)
 
-    # Демонстрація виведення інформації про одяг
+   
     for clothing_item in wardrobe.clothes:
         clothing_item.display_info()
         print()
 
-    # Перевірка готовності вийти на вулицю
+   
     if wardrobe.go_out():
         print("Готовий вийти на вулицю!")
     else:
         print("Не готовий вийти на вулицю.")
 
-    # Сортування одягу за розміром
+   
     wardrobe.sort_clothes_by_size()
-
-    # Виклик додаткового методу для класу одягу
     shirt1.additional_method()
 
 if __name__ == "__main__":
