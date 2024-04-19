@@ -1,18 +1,21 @@
 from typing import List
 
-def dfs(current_level: int, current_position: int, current_experience: int, max_experience: List[int]) -> None:
+def bfs(current_level: int, current_position: int, current_experience: int, max_experience: List[int]) -> None:
    
-   
-    if current_level == L:
-        max_experience[0] = max(max_experience[0], current_experience)
-        return
+    L = len(levels)
+    max_experience = 0 
+    queue = [(0,0, levels [0][0])]
 
-   
+    while queue:
+        current_level, current_position, current_experience = queue.pop(0)
+        max_experience = max(max_experience, current_experience)
+
+
     for next_position in range(len(levels[current_level])):
-        next_experience = levels[current_level][next_position]
-        
-        if abs(next_position - current_position) <= 1:
-            dfs(current_level + 1, next_position, current_experience + next_experience, max_experience)
+      if abs(next_position - current_position) <= 1:
+        next_experience = current_experience + levels[current_level][next_position]
+        queue.append((current_level + 1, next_position, next_experience))
+
 
 
 with open("career.in", "r") as file:
