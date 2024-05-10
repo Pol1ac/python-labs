@@ -4,17 +4,7 @@ from src.min_cable_size import Graph
 
 class TestGraphFunctionality(unittest.TestCase):
     def load_graph_from_file(self, file_path):
-        """
-        Бере файл CSV, який містить дані про ребра та повертає граф
-
-        Юзаємо read_input_file,щоб прочитати дані з csv файлу,
-        ініціалізує граф з вузлами, отриманими з цих ребер, та додає ребра до графа.
-
-        file_path = Шлях до CSV файлу, який містить дані про ребра.
-        Формат файлу повинен бути start/end/weight, де
-        start та end = вузли, weight= вага,
-        в нашому випадку відстань між колодязями.
-        """
+       
         edges = read_input_file(file_path)
         nodes = set()
         graph = Graph(nodes=list(nodes))
@@ -42,11 +32,7 @@ class TestGraphFunctionality(unittest.TestCase):
         self.assertEqual(result, -1)
 
     def test_isolated_nodes(self):
-        """
-        Тестування наявності незалежних вершин, для цього створюю окремо
-        isolated_edges незалежно від інших еджів та додаю умову відокремлених
-        вершин, які незалежні від початкової умови.
-        """
+      
         isolated_edges = read_input_file('../src/resources/communication_wells4.csv')
         isolated_nodes = set(['K4', 'K5'])
         isolated_graph = Graph(nodes=list(isolated_nodes))
