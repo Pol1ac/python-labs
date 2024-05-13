@@ -1,5 +1,6 @@
-import lab_4
 import unittest
+from src.heap_based_priority_queue import HeapBasedPriorityQueue
+
 
 class TestHeapBasedPriorityQueue(unittest.TestCase):
 
@@ -13,4 +14,3 @@ class TestHeapBasedPriorityQueue(unittest.TestCase):
         self.assertEqual(pq.peek(), 5)
         pq.delete_max()
         self.assertEqual(pq.peek(), 4)
-       

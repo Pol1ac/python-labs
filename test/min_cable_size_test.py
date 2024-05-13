@@ -1,10 +1,9 @@
 import unittest
-from src.min_cable_size import Graph
+from src.min_cable_size import Graph, read_input_file
 
 
 class TestGraphFunctionality(unittest.TestCase):
     def load_graph_from_file(self, file_path):
-       
         edges = read_input_file(file_path)
         nodes = set()
         graph = Graph(nodes=list(nodes))
@@ -32,7 +31,6 @@ class TestGraphFunctionality(unittest.TestCase):
         self.assertEqual(result, -1)
 
     def test_isolated_nodes(self):
-      
         isolated_edges = read_input_file('../src/resources/communication_wells4.csv')
         isolated_nodes = set(['K4', 'K5'])
         isolated_graph = Graph(nodes=list(isolated_nodes))

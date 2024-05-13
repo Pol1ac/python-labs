@@ -1,5 +1,5 @@
-from lab_5 import bfs
 import unittest
+from src.bfs_maze import bfs
 
 
 class TestBFS(unittest.TestCase):
