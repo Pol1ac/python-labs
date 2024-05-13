@@ -1,5 +1,6 @@
 import unittest
-import lab_6
+from src.career import dfs
+
 
 class CareerPathTest(unittest.TestCase):
 

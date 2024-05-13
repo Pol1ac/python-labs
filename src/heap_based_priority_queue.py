@@ -23,7 +23,6 @@ class HeapBasedPriorityQueue:
         if self.heap:
             self._bubble_down(0)
         return max_priority_node.value
-м
 
     def _bubble_up(self, index):
         parent_index = (index - 1) // 2
